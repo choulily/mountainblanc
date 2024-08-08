@@ -1,8 +1,8 @@
-# android_devices_samsung_montblanc
 Device tree for samsung W2015 (WIP)
 
 Samsung W2014 montblanc
 A flip phone realesed in 2013. Comes with Android 4.3.
+
 SOC: msm8974 (Qualcomm Snapdragon 800) Armv7
   With: 4x Kreit 400 CPU
         Adreno 330   GPU
