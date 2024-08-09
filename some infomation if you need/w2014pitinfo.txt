@@ -1,0 +1,345 @@
+Magic: 0x12349876
+Count: 31
+---------------------
+Partition ID: 1
+Name: APNHLOS
+File Name: NON-HLOS.bin
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 8192
+Blknum: 30720
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 2
+Name: MODEM
+File Name: modem.bin
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 38912
+Blknum: 117632
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 3
+Name: SBL1
+File Name: sbl1.mbn
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 156544
+Blknum: 1024
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 4
+Name: DBI
+File Name: sdi.mbn
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 157568
+Blknum: 64
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 5
+Name: DDR
+File Name: 
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 157632
+Blknum: 64
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 6
+Name: ABOOT
+File Name: aboot.mbn
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 157696
+Blknum: 4096
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 7
+Name: RPM
+File Name: rpm.mbn
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 161792
+Blknum: 1024
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 8
+Name: TZ
+File Name: tz.mbn
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 162816
+Blknum: 1024
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 9
+Name: PAD
+File Name: 
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 163840
+Blknum: 20480
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 10
+Name: PARAM
+File Name: 
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 184320
+Blknum: 20480
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 11
+Name: EFS
+File Name: efs.img.ext4
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 204800
+Blknum: 28672
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 12
+Name: MODEMST1
+File Name: nvrebuild1.bin
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 233472
+Blknum: 6144
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 13
+Name: MODEMST2
+File Name: nvrebuild2.bin
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 239616
+Blknum: 6144
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 14
+Name: BOOT
+File Name: boot.img
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 245760
+Blknum: 22528
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 15
+Name: RECOVERY
+File Name: recovery.img
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 268288
+Blknum: 26624
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 16
+Name: FOTA
+File Name: 
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 294912
+Blknum: 26624
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 17
+Name: BACKUP
+File Name: 
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 321536
+Blknum: 14318
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 18
+Name: FSG
+File Name: 
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 335854
+Blknum: 6144
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 19
+Name: FSC
+File Name: 
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 341998
+Blknum: 2
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 20
+Name: SSDMODEM
+File Name: sc_modem.bin
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 342000
+Blknum: 16
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 21
+Name: CP2_MODEM
+File Name: cp2_modem.bint4
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 342016
+Blknum: 8192
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 22
+Name: PERSIST
+File Name: persist.img.ext4
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 350208
+Blknum: 16384
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 23
+Name: PERSDATA
+File Name: persdata.img.ext4
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 366592
+Blknum: 18432
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 24
+Name: SYSTEM
+File Name: system.img.ext4
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 385024
+Blknum: 3481600
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 25
+Name: CACHEA
+File Name: cache.img.ext44
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 3866624
+Blknum: 614400
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 26
+Name: HIDDENA
+File Name: hidden.img.ext44
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 4481024
+Blknum: 614400
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 27
+Name: USERDATA
+File Name: userdata.img.ext4
+Delta Name: remained
+Binary: 0
+Device: 2
+Blkstart: 5095424
+Blknum: 0
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 70
+Name: PGPT
+File Name: pgpt.imgit
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 0
+Blknum: 34
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 71
+Name: PIT
+File Name: MSM8974.pit
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 34
+Blknum: 16
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 72
+Name: MD5
+File Name: md5.img
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 50
+Blknum: 32
+Offset: 0
+filesize: 0
+---------------------
+Partition ID: 73
+Name: SGPT
+File Name: sgpt.img
+Delta Name: 
+Binary: 0
+Device: 2
+Blkstart: 30760927
+Blknum: 33
+Offset: 0
+filesize: 0
+---------------------
+Signature: 00000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000

@@ -1,49 +1,34 @@
 #!/bin/bash
 #
-# Copyright (C) 2014 The CyanogenMod Project
-# Copyright (C) 2017-2021 The LineageOS Project
+# Copyright (C) 2016 The CyanogenMod Project
+# Copyright (C) 2017-2020 The LineageOS Project
 #
 # SPDX-License-Identifier: Apache-2.0
 #
 
+# we dont need fixup
+#function blob_fixup() {
+#    case "${1}" in
+#        # Use generic Light HAL context for led_control_service
+#        vendor/etc/init/led_control_service.rc)
+#            sed -i "8d" "${2}"
+#            ;;
+#    esac
+#}
+
+# If we're being sourced by the common script that we called,
+# stop right here. No need to go down the rabbit hole.
+if [ "${BASH_SOURCE[0]}" != "${0}" ]; then
+    return
+fi
+
 set -e
 
-if [ -z "${DEVICE_COMMON}" ]; then
-    echo ""
-    echo "error: This is a script in a common tree. Please execute" $(basename $0) "from a device tree."
-    echo ""
-    exit 1
-fi
+export DEVICE=montblanc
+export DEVICE_COMMON=msm8974-common
+export TARGET_SOC=msm8974
+export VENDOR=samsung
+export VENDOR_BRAND="${VENDOR}"
+export VENDOR_COMMON=qcom
 
-# Load extract_utils and do some sanity checks
-MY_DIR="${BASH_SOURCE%/*}"
-if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
-
-ANDROID_ROOT="${MY_DIR}/../../.."
-
-HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
-if [ ! -f "${HELPER}" ]; then
-    echo "Unable to find helper script at ${HELPER}"
-    exit 1
-fi
-source "${HELPER}"
-
-function blob_fixup() {
-    case "${1}" in
-        vendor/bin/thermal-engine)
-            sed -i 's|/system/etc|/vendor/etc|g' "${2}"
-            ;;
-        vendor/lib/libmmcamera2_sensor_modules.so)
-            sed -i 's|system/etc|vendor/etc|g;
-                    s|/system/lib|/vendor/lib|g' "${2}"
-            ;;
-    esac
-}
-
-setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true
-
-extract "${MY_DIR}/common-proprietary-files.txt" "${SRC}"
-
-export BOARD_COMMON=msm8974-common
-
-"./../../${VENDOR}/${BOARD_COMMON}/extract-files.sh" "$@"
+"./../../${VENDOR_COMMON}/${DEVICE_COMMON}/extract-files.sh" "$@"

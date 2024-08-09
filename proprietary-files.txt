@@ -15,27 +15,27 @@ etc/Global_cal.acdb:vendor/etc/acdbdata/Global_cal.acdb
 etc/Hdmi_cal.acdb:vendor/etc/acdbdata/Hdmi_cal.acdb
 etc/Headset_cal.acdb:vendor/etc/acdbdata/Headset_cal.acdb
 etc/Speaker_cal.acdb:vendor/etc/acdbdata/Speaker_cal.acdb
-vendor/lib/soundfx/libqcbassboost.so
-vendor/lib/soundfx/libqcvirt.so
-vendor/lib/soundfx/libqcreverb.so
+#vendor/lib/soundfx/libqcbassboost.so
+#vendor/lib/soundfx/libqcvirt.so
+#vendor/lib/soundfx/libqcreverb.so
 
 # ADSP
-bin/adsprpcd:vendor/bin/adsprpcd
+#bin/adsprpcd:vendor/bin/adsprpcd
 vendor/lib/libadsprpc.so
-vendor/lib/libfastcvadsp_stub.so
+#vendor/lib/libfastcvadsp_stub.so
 vendor/lib/libfastcvopt.so
-vendor/lib/libscve.so
-vendor/lib/libscve_stub.so
-vendor/lib/rfsa/adsp/libdspCV_skel.so
-vendor/lib/rfsa/adsp/libfastcvadsp.so
-vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
-vendor/lib/rfsa/adsp/libscveT2T_skel.so
+#vendor/lib/libscve.so
+#vendor/lib/libscve_stub.so
+#vendor/lib/rfsa/adsp/libdspCV_skel.so
+#vendor/lib/rfsa/adsp/libfastcvadsp.so
+#vendor/lib/rfsa/adsp/libfastcvadsp_skel.so
+#vendor/lib/rfsa/adsp/libscveT2T_skel.so
 
 # Bluetooth firmware
-vendor/firmware/bcm4335_V0111.0559.hcd
+#vendor/firmware/bcm4335_V0111.0559.hcd
 
 # Camera
-bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
+#bin/mm-qcamera-daemon:vendor/bin/mm-qcamera-daemon
 lib/hw/camera.msm8974.so:vendor/lib/hw/camera.vendor.msm8974.so
 lib/libarcsoft_nighthawk.so:vendor/lib/libarcsoft_nighthawk.so
 lib/libliveframework.so:vendor/lib/libliveframework.so
@@ -237,17 +237,17 @@ etc/firmware/cpp_firmware_v1_1_6.fw:vendor/firmware/cpp_firmware_v1_1_6.fw
 etc/firmware/cpp_firmware_v1_2_0.fw:vendor/firmware/cpp_firmware_v1_2_0.fw
 
 # CPU - pinned blobs from G900FXXU1CRA2_G900FOXA1CRA2_BTU
-vendor/bin/mpdecision|bf788461981e8b593db5bb224e6e8059ef5adb57
-bin/thermal-engine:vendor/bin/thermal-engine
+#vendor/bin/mpdecision|bf788461981e8b593db5bb224e6e8059ef5adb57
+#bin/thermal-engine:vendor/bin/thermal-engine
 vendor/lib/libthermalclient.so
-vendor/lib/libthermalioctl.so
+#vendor/lib/libthermalioctl.so
 
 # DRM
-bin/qseecomd:vendor/bin/qseecomd
+#bin/qseecomd:vendor/bin/qseecomd
 vendor/lib/libdrmfs.so
 vendor/lib/libdrmtime.so
-vendor/lib/librpmb.so
-vendor/lib/libssd.so
+#vendor/lib/librpmb.so
+#vendor/lib/libssd.so
 vendor/lib/libQSEEComAPI.so
 
 # IPC router security
@@ -265,28 +265,28 @@ vendor/lib/libOmxQcelp13Dec.so
 vendor/lib/libOmxWmaDec.so
 
 # NFC
-vendor/firmware/bcm2079xB4_firmware.ncd
-vendor/firmware/bcm2079xB4_pre_firmware.ncd
-vendor/firmware/bcm2079xB5_firmware.ncd
-vendor/firmware/bcm2079xB5_pre_firmware.ncd
+#vendor/firmware/bcm2079xB4_firmware.ncd
+#vendor/firmware/bcm2079xB4_pre_firmware.ncd
+#vendor/firmware/bcm2079xB5_firmware.ncd
+#vendor/firmware/bcm2079xB5_pre_firmware.ncd
 
 # Perf
-vendor/lib/libqti-perfd-client.so
+#vendor/lib/libqti-perfd-client.so
 
 # Qualcomm
 vendor/lib/libxml.so
 
 # Qualcomm framework - pinned blobs from G900FXXS1BPCL_G900FOXA1BOJ1_BTU
-lib/libmdmdetect.so:vendor/lib/libmdmdetect.so
-vendor/lib/libconfigdb.so
+#lib/libmdmdetect.so:vendor/lib/libmdmdetect.so
+#vendor/lib/libconfigdb.so
 vendor/lib/libdiag.so
-vendor/lib/libdsi_netctrl.so|d5d25fd5b1ea250bdfcb64059eafaf609fe2e32c
-vendor/lib/libdsutils.so
+#vendor/lib/libdsi_netctrl.so|d5d25fd5b1ea250bdfcb64059eafaf609fe2e32c
+#vendor/lib/libdsutils.so
 vendor/lib/libidl.so
-vendor/lib/libnetmgr.so
-vendor/lib/libperipheral_client.so
+#vendor/lib/libnetmgr.so
+#vendor/lib/libperipheral_client.so
 vendor/lib/libqcci_legacy.so
-vendor/lib/libqdi.so|6bd79ba4dc4b4af654cda666e829312ba07a22e9
+#vendor/lib/libqdi.so|6bd79ba4dc4b4af654cda666e829312ba07a22e9
 vendor/lib/libqmi.so
 vendor/lib/libqmi_cci.so
 vendor/lib/libqmi_client_qmux.so
@@ -296,18 +296,18 @@ vendor/lib/libqmi_encdec.so
 vendor/lib/libqmiservices.so
 
 # Radio
-bin/efsks:vendor/bin/efsks
-bin/ks:vendor/bin/ks
-bin/qcks:vendor/bin/qcks
-bin/qmuxd:vendor/bin/qmuxd
+#bin/efsks:vendor/bin/efsks
+#bin/ks:vendor/bin/ks
+#bin/qcks:vendor/bin/qcks
+#bin/qmuxd:vendor/bin/qmuxd
 bin/rfs_access:vendor/bin/rfs_access
-bin/rmt_storage:vendor/bin/rmt_storage
-vendor/lib/libril-qcril-hook-oem.so
+#bin/rmt_storage:vendor/bin/rmt_storage
+#vendor/lib/libril-qcril-hook-oem.so
 
 # Sensors
 lib/hw/sensorhubs.msm8974.so:vendor/lib/hw/sensorhubs.msm8974.so
 lib/hw/sensors.msm8974.so:vendor/lib/hw/sensors.vendor.msm8974.so
-lib/libsensirion_h_2.so:vendor/lib/libsensirion_h_2.so
+#lib/libsensirion_h_2.so:vendor/lib/libsensirion_h_2.so
 
 # Wi-Fi
 etc/wifi/bcmdhd_apsta.bin:vendor/etc/wifi/bcmdhd_apsta.bin
@@ -319,9 +319,9 @@ etc/wifi/nvram_mfg.txt:vendor/etc/wifi/nvram_mfg.txt
 etc/wifi/nvram_mfg.txt_murata:vendor/etc/wifi/nvram_mfg.txt_murata|d39fdba37f72ed0c3d635285f91dda77a9c8098b
 etc/wifi/nvram_mfg.txt_muratafem1:vendor/etc/wifi/nvram_mfg.txt_muratafem1|2badb2b638980b7858b02bc9c2c21cf307ffa1ad
 etc/wifi/nvram_mfg.txt_semco3rd:vendor/etc/wifi/nvram_mfg.txt_semco3rd
-etc/wifi/nvram_mfg.txt_wisol:vendor/etc/wifi/nvram_mfg.txt_wisol
+#etc/wifi/nvram_mfg.txt_wisol:vendor/etc/wifi/nvram_mfg.txt_wisol
 etc/wifi/nvram_net.txt:vendor/etc/wifi/nvram_net.txt
 etc/wifi/nvram_net.txt_murata:vendor/etc/wifi/nvram_net.txt_murata|7b514f462fb555eb0608600fe26634bf354bcc0d
 etc/wifi/nvram_net.txt_muratafem1:vendor/etc/wifi/nvram_net.txt_muratafem1|40dfcd74b14def9a292455ad00c6280fae6975eb
 etc/wifi/nvram_net.txt_semco3rd:vendor/etc/wifi/nvram_net.txt_semco3rd
-etc/wifi/nvram_net.txt_wisol:vendor/etc/wifi/nvram_net.txt_wisol
+#etc/wifi/nvram_net.txt_wisol:vendor/etc/wifi/nvram_net.txt_wisol

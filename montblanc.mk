@@ -150,7 +150,6 @@ PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/configs/p2p_supplicant_overlay.conf:$(TARGET_COPY_OUT_VENDOR)/etc/wifi/p2p_supplicant_overlay.conf
 
 # Get non-open-source specific aspects
-#TODO
 $(call inherit-product, vendor/samsung/montblanc/montblanc-vendor.mk)
 
 # Common msm8974
