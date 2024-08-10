@@ -296,7 +296,7 @@ Delta Name: remained
 Binary: 0
 Device: 2
 Blkstart: 5095424
-Blknum: 0
+Blknum: 0    # should be 57412653
 Offset: 0
 filesize: 0
 ---------------------

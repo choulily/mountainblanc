@@ -72,12 +72,12 @@ TARGET_PROCESS_SDK_VERSION_OVERRIDE += \
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 11534336
-BOARD_CACHEIMAGE_PARTITION_SIZE := 262144000
+BOARD_CACHEIMAGE_PARTITION_SIZE := 314572800
 BOARD_RECOVERYIMAGE_PARTITION_SIZE := 13631488
-BOARD_SYSTEMIMAGE_PARTITION_SIZE := 2365587456
-BOARD_USERDATAIMAGE_PARTITION_SIZE := 28651290624
+BOARD_SYSTEMIMAGE_PARTITION_SIZE := 1782579200
+BOARD_USERDATAIMAGE_PARTITION_SIZE := 29395278336
 BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
-BOARD_FLASH_BLOCK_SIZE := 131072
+BOARD_FLASH_BLOCK_SIZE := 131072    # =BOARD_KERNEL_PAGESIZE*64
 BOARD_ROOT_EXTRA_FOLDERS := efs firmware firmware-modem persist
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /data/tombstones:/tombstones
@@ -91,32 +91,34 @@ TARGET_SYSTEM_PROP += $(COMMON_PATH)/system.prop
 BOARD_PROVIDES_LIBRIL := true
 
 # Recovery
-TARGET_RECOVERY_DENSITY := xhdpi
+TARGET_RECOVERY_DENSITY := hdpi
 TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
 
 # SELinux
+# TODO: get all the sepolicy files. makefile already done. using sepolicy form hlte for now, should work
 include $(COMMON_PATH)/sepolicy/sepolicy.mk
 
 # Sensors
 TARGET_NO_SENSOR_PERMISSION_CHECK := true
 
 # Wifi
-BOARD_HAVE_SAMSUNG_WIFI := true
-BOARD_WLAN_DEVICE := bcmdhd
-BOARD_HOSTAPD_DRIVER := NL80211
-BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-BOARD_WPA_SUPPLICANT_DRIVER := NL80211
-BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
-WPA_SUPPLICANT_VERSION := VER_0_8_X
-WIFI_BAND := 802_11_ABG
-WIFI_DRIVER_MODULE_ARG      := "firmware_path=/vendor/etc/wifi/bcmdhd_sta.bin nvram_path=/vendor/etc/wifi/nvram_net.txt"
-WIFI_DRIVER_MODULE_AP_ARG   := "firmware_path=/vendor/etc/wifi/bcmdhd_apsta.bin nvram_path=/vendor/etc/wifi/nvram_net.txt"
-WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/dhd/parameters/firmware_path"
-WIFI_DRIVER_FW_PATH_STA     := "/vendor/etc/wifi/bcmdhd_sta.bin"
-WIFI_DRIVER_FW_PATH_AP      := "/vendor/etc/wifi/bcmdhd_apsta.bin"
-WIFI_DRIVER_NVRAM_PATH_PARAM:= "/sys/module/dhd/parameters/nvram_path"
-WIFI_DRIVER_NVRAM_PATH      := "/vendor/etc/wifi/nvram_net.txt"
-WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
+# TODO: find a phone that use the same chip, and "borrow" config from it
+#BOARD_HAVE_SAMSUNG_WIFI := true
+#BOARD_WLAN_DEVICE := bcmdhd
+#BOARD_HOSTAPD_DRIVER := NL80211
+#BOARD_HOSTAPD_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+#BOARD_WPA_SUPPLICANT_DRIVER := NL80211
+#BOARD_WPA_SUPPLICANT_PRIVATE_LIB := lib_driver_cmd_$(BOARD_WLAN_DEVICE)
+#WPA_SUPPLICANT_VERSION := VER_0_8_X
+#WIFI_BAND := 802_11_ABG
+#WIFI_DRIVER_MODULE_ARG      := "firmware_path=/vendor/etc/wifi/bcmdhd_sta.bin nvram_path=/vendor/etc/wifi/nvram_net.txt"
+#WIFI_DRIVER_MODULE_AP_ARG   := "firmware_path=/vendor/etc/wifi/bcmdhd_apsta.bin nvram_path=/vendor/etc/wifi/nvram_net.txt"
+#WIFI_DRIVER_FW_PATH_PARAM   := "/sys/module/dhd/parameters/firmware_path"
+#WIFI_DRIVER_FW_PATH_STA     := "/vendor/etc/wifi/bcmdhd_sta.bin"
+#WIFI_DRIVER_FW_PATH_AP      := "/vendor/etc/wifi/bcmdhd_apsta.bin"
+#WIFI_DRIVER_NVRAM_PATH_PARAM:= "/sys/module/dhd/parameters/nvram_path"
+#WIFI_DRIVER_NVRAM_PATH      := "/vendor/etc/wifi/nvram_net.txt"
+#WIFI_HIDL_UNIFIED_SUPPLICANT_SERVICE_RC_ENTRY := true
 
 # Inherit from the proprietary version
-include vendor/samsung/hlte-common/BoardConfigVendor.mk
+include vendor/samsung/montblanc/BoardConfigVendor.mk
