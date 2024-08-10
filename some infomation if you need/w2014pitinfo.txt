@@ -1,3 +1,5 @@
+size of each block in bytes: 512
+
 Magic: 0x12349876
 Count: 31
 ---------------------
