@@ -5,7 +5,7 @@
 <manifest>
     <remote name="github"
             fetch="https://github.com"
-            revision="main"/>
+            revision="master"/>
 
 
     <project path="device/samsung/montblanc" name="choulily/mountainblanc" remote="github" />
