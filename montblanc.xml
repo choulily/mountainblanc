@@ -1,41 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <!-- This file should be placed in ANDROID_ROOT/.repo/local_manifests/ -->
-<!-- UNCOMMENT THE PART SANDWITCHED BETWEEN THE TWO LINES BEFORE USE-->
-<!-- Just being lazy to editthis file before i push-->
-<!-- btw. my harddrive is dying, i may lost ALL my work if i dont push quick enough, it sound like crazy, all my harddrive is pretty full besides this-->
 
 <manifest>
-
-    <!-------------------------------------------------------------------------------------------------->
-    <!--
     <remote name="github"
             fetch="https://github.com"
             revision="main"/>
 
-    <!-- dont want to bother fixing the:                            typo \|/-->
-    <project path="device/samsung/montblanc" name="choulily/android_devices_montblanc" remote="github" />
+
+    <project path="device/samsung/montblanc" name="choulily/mountainblanc" remote="github" />
 
     <project path="kernel/samsung/montblanc" name="choulily/android_kernel_montblanc" remote="github" />
-    -->
-    <!-------------------------------------------------------------------------------------------------->
-
-    <!-- Things below should only be used in dev environment -->
-    <!-- TODO to hightlight: RUN GIT SERVER BEFORE ATTEMPT TO USE LOCAL BRANCH-->
-    <!-- Just to answer you why i use a local branch: this phone is darn cheap in used market, but it is still can be useful if it can get android 4+, my work will raise the price by fair a bit, i still want to get a good condition phone, so i keep this project secret until one day i want to make it publicly open. -->
-
-
-
-    <remote name="local"
-            fetch="http://127.0.0.1:12345/"
-            revision="main"/>
-
-    <!-- dont want to bother fixing the:                            typo \|/-->
-    <project path="device/samsung/montblanc" name="choulily/android_devices_montblanc" remote="local" />
-
-    <project path="kernel/samsung/montblanc" name="choulily/android_kernel_montblanc" remote="local" />
-
-
 
 </manifest>
 <!-- i may need to get a friend, i am talking to nothing too much here -->
