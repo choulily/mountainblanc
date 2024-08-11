@@ -1,6 +1,23 @@
-Device tree for samsung W2015 (WIP)
+Device tree for samsung W2010+4 (WIP)(Untested)
+-------------------------------------------------------------------------
+USING THIS PROJECT HAS A HIGH CHANCE OF BRICKING YOUR PHONE.
+RIFF BOX DONT SUPPORT THIS DEVICE. BRICKED DEVICE CANT BE RECOVERED
+ONCE BRICKED
+USE THIS PROJECT AT YOUR OWN RISK!!!!!
+-------------------------------------------------------------------------
+Current Stat: Mostly done, but no any build yet.
+-------------------------------------------------------------------------
+How to use: dont recommend anyone use this project at this stat.
+    if you want to, figure it out on your own since is not done.
+-------------------------------------------------------------------------
+This project is changing its name to prevent people find it.
+the device has way more vaule if android 4+ rom is ported to it.
+to prevent the price going rocket fly, i have to change its name.
+since i want to get a perfect condition phone at low price.
+and fix my degraded outter screen.(early-year oled, man)
+-------------------------------------------------------------------------
 
-Samsung W2014 montblanc
+Samsung W2010+4 montblanc
 A flip phone realesed in 2013. Comes with Android 4.3.
 
 SOC: msm8974 (Qualcomm Snapdragon 800) Armv7
@@ -8,7 +25,9 @@ SOC: msm8974 (Qualcomm Snapdragon 800) Armv7
         Adreno 330   GPU
 Screen: 480x800 3.67inch on both screens 254dpi 252ppi
 Radio: Spreadtrum SC6500ES(?)
-       This is a soc. Some software magic? Maybe SOC built-in. msm8974 support LTE, but no sign of LTE is present in the phone.
+       This is a soc. Some software magic? Maybe SOC built-in.
+       msm8974 support LTE, but no sign of LTE is present in the phone.
+       the system prop says it uses both chip.
 Camera: rear: 13MP SNOY IMX135
         front:2.1MP S5K6B2YX
 Bluetooth: msm8974(SOC built-in) bluetooth4.0
