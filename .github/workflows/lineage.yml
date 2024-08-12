@@ -28,6 +28,9 @@ jobs:
         cd /
         df -h
 
+    - name: DEBUG_Get install packages
+      run: apt list --installed
+
     - name: Setup LineageOS Tree
       run: |
         mkdir ~/lineageos
