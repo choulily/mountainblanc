@@ -22,7 +22,7 @@ jobs:
 
     - name: Free Up disk space
       run: |
-        sudo apt remove apache2* azure-cli cloud-init* docker* dotnet* fonts-noto-color-emoji fonts-lato fonts-liberation fwupd ftp gdisk golang* heroku htop libavahi* libflashrom libmono* libnginx* nginx* mysql* mono* php* ruby* tk* ubuntu-pro* vim* 
+        sudo apt remove apache2* azure-cli cloud-init* docker* dotnet* fonts-noto-color-emoji fonts-lato fonts-liberation fwupd ftp gdisk golang* heroku htop libavahi* libmono* libnginx* nginx* mysql* mono* php* ruby* tk* ubuntu-pro* vim* 
 
     - name: DEBUG_Get System info
       run: |
