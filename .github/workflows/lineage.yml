@@ -35,9 +35,21 @@ jobs:
     - name: DEBUG_Get install packages
       run: apt list --installed
 
+    - name: Btrfs magic
+      run: | 
+        sudo dd if=/dev/zero of=/btrfs1.img bs=1G count=24 status=progress
+        sudo dd if=/dev/zero of=/mnt/btrfs2.img bs=1G count=66 status=progress
+        sudo lodetup /dev/loop64 /btrfs1.img
+        sudo losetup /dev/loop128 /mnt/btrfs2.img
+        sudo mkfs.btrfs -d single -m raid0 /dev/loop64 /dev/loop128
+        sudo btrfs device scan
+        mkdir /source
+        mount -o compress=zstd /dev/loop64 /source
+        
+
     - name: Setup LineageOS Tree
       run: |
-        mkdir ~/lineageos
-        cd ~/lineageos
+        mkdir /source/los
+        cd /source/los
 
         
