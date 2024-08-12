@@ -1,0 +1,33 @@
+name: lineageos
+
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v3
+    
+    - name: Install Packages
+      run: |
+        sudo apt update
+        sudo apt upgrade
+        sudo apt install bc bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32readline-dev lib32z1-dev libelf-dev liblz4-tool libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev
+        sudo apt install fastfetch
+
+    - name: DEBUG_Get System info
+      run: |
+        fastfetch
+        free -h
+        uname -a
+        cd /
+        df -h
+
+    - name: Setup LineageOS Tree
+      run: |
+        mkdir ~/lineageos
+        cd ~/lineageos
+
+        
