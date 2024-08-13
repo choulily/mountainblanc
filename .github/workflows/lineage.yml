@@ -44,8 +44,8 @@ jobs:
         sudo losetup /dev/loop128 /mnt/btrfs2.img
         sudo mkfs.btrfs -d single -m raid0 /dev/loop64 /dev/loop128
         sudo btrfs device scan
-        mkdir /source
-        mount -o compress=zstd /dev/loop64 /source
+        sudo mkdir /source
+        sudo mount -o compress=zstd /dev/loop64 /source
         
 
     - name: Setup LineageOS Tree
