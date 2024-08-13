@@ -35,7 +35,7 @@ jobs:
         uname -a
         cd /
         df -h
-        tree ~
+        #tree ~
 
     - name: DEBUG_Get install packages
       run: apt list --installed
@@ -58,6 +58,8 @@ jobs:
         mkdir /source/los
         cd /source/los
         repo init -u https://github.com/LineageOS/android.git -b lineage-18.1 --git-lfs
+        repo sync -j16
+        cp ~/work/mountainblanc/mountainblanc/montblanc.xml /source/los/.repo/local_manifests/montblanc.xml
         repo sync
 
 
