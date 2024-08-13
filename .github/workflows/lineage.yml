@@ -46,6 +46,7 @@ jobs:
         sudo btrfs device scan
         sudo mkdir /source
         sudo mount -o compress=zstd /dev/loop64 /source
+        sudo chown runner /source
         
 
     - name: Setup LineageOS Tree
