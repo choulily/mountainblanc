@@ -35,6 +35,7 @@ jobs:
         uname -a
         cd /
         df -h
+        tree ~
 
     - name: DEBUG_Get install packages
       run: apt list --installed
@@ -56,5 +57,7 @@ jobs:
       run: |
         mkdir /source/los
         cd /source/los
-
+        repo init -u https://github.com/LineageOS/android.git -b lineage-18.1 --git-lfs
+        repo sync
+        git clone
         
