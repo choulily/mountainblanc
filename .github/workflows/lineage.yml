@@ -59,4 +59,11 @@ jobs:
         cd /source/los
         repo init -u https://github.com/LineageOS/android.git -b lineage-18.1 --git-lfs
         repo sync
+
+
+    - name: DEBUG_Disk Check
+      run: |
+        cd /source
+        df -h
+        fastfetch
         
