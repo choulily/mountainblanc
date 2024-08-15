@@ -59,6 +59,8 @@ jobs:
         cd /source/los
         repo init -u https://github.com/LineageOS/android.git -b lineage-18.1 --git-lfs
         repo sync -j16
+        # sync again to avoid internet glich out
+        repo sync -j1 --fail-fast
         cp ~/work/mountainblanc/mountainblanc/montblanc.xml /source/los/.repo/local_manifests/montblanc.xml
         repo sync
 
