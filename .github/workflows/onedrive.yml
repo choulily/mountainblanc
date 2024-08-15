@@ -44,7 +44,7 @@ jobs:
     - name: rclone
       run: |
         echo "${{ secrets.SECRETS_RCLONE }}" >> ./rclone.conf
-        sudo mkdir ~/.config
+        sudo mkdir ~/.config/rclone
         sudo cp ./rclone.conf ~/.config/rclone/rclone.conf
         sudo mkdir /rclone
         sudo rclone mount actions: /rclone
