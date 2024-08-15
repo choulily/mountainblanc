@@ -1,0 +1,84 @@
+name: rclone
+
+on: [workflow_dispatch, push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout Repo
+      uses: actions/checkout@v3
+    
+    - name: Install Packages
+      run: |
+        sudo add-apt-repository ppa:zhangsongcui3371/fastfetch
+        sudo apt update
+        # FU snap store
+        sudo apt remove firefox snapd snap
+        sudo apt upgrade 
+        sudo apt install bc bison build-essential ccache curl flex g++-multilib gcc-multilib git git-lfs gnupg gperf imagemagick lib32readline-dev lib32z1-dev libelf-dev liblz4-tool libsdl1.2-dev libssl-dev libxml2 libxml2-utils lzop pngcrush rsync schedtool squashfs-tools xsltproc zip zlib1g-dev libncurses5
+        sudo apt install fastfetch
+        sudo apt install rclone
+        curl https://storage.googleapis.com/git-repo-downloads/repo > ~/repo
+        sudo cp ~/repo /bin/repo
+        sudo chmod a+x /bin/repo
+
+    - name: Free Up disk space
+      run: |
+        sudo apt remove apache2* azure-cli cloud-init* docker* dotnet* fonts-noto-color-emoji fonts-lato fonts-liberation fwupd ftp gdisk golang* heroku htop libavahi* libmono* libnginx* nginx* mysql* mono* php* ruby* tk* ubuntu-pro* vim* 
+        sudo apt auto-remove
+
+    - name: DEBUG_Get System info
+      run: |
+        fastfetch
+        free -h
+        uname -a
+        cd /
+        df -h
+        #tree ~
+
+    - name: DEBUG_Get install packages
+      run: apt list --installed
+
+    - name: rclone
+      run: |
+        echo ${{ secrets.SECRETS_RCLONE }} | tee ~/.config/rclone/rclone.conf
+        sudo mkdir /rclone
+        sudo rclone mount actions: /rclone
+        rm /rclone/btrfs*
+
+    - name: Btrfs magic
+      run: | 
+        sudo dd if=/dev/zero of=/btrfs1.img bs=512M count=47 status=progress
+        sudo dd if=/dev/zero of=/mnt/btrfs2.img bs=1G count=67 status=progress
+        # only use 10GB since it is tooooooooo slow
+        sudo dd if=/dev/zero of=/rclone/btrfs3.img bs=1G count=10 status=progress
+        sudo losetup /dev/loop64 /btrfs1.img
+        sudo losetup /dev/loop128 /mnt/btrfs2.img
+        sudo losetup /dev/loop256 /rclone/btrfs3.img
+        sudo mkfs.btrfs -d single -m raid0 /dev/loop64 /dev/loop128 /dev/loop256
+        sudo btrfs device scan
+        sudo mkdir /source
+        sudo mount -o compress=zstd /dev/loop64 /source
+        sudo chown runner /source
+        
+
+    - name: Setup LineageOS Tree
+      run: |
+        mkdir /source/los
+        cd /source/los
+        repo init -u https://github.com/LineageOS/android.git -b lineage-18.1 --git-lfs
+        repo sync -j16
+        # sync again to avoid internet glich out
+        repo sync -j1 --fail-fast
+        cp ~/work/mountainblanc/mountainblanc/montblanc.xml /source/los/.repo/local_manifests/montblanc.xml
+        repo sync
+
+
+    - name: DEBUG_Disk Check
+      run: |
+        cd /source
+        df -h
+        fastfetch
+        
