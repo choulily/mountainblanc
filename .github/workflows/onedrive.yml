@@ -43,9 +43,7 @@ jobs:
 
     - name: rclone
       run: |
-        mkdir ~/.config/rclone
-        touch ~/config/rclone/rclone.conf
-        echo "${{ secrets.SECRETS_RCLONE }}" | tee ~/.config/rclone/rclone.conf
+        echo "${{ secrets.SECRETS_RCLONE }}" >> ~/.config/rclone/rclone.conf
         sudo mkdir /rclone
         sudo rclone mount actions: /rclone
         rm /rclone/btrfs*
