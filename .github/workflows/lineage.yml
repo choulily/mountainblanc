@@ -42,7 +42,7 @@ jobs:
 
     - name: Btrfs magic
       run: | 
-        sudo dd if=/dev/zero of=/btrfs1.img bs=1G count=27 status=progress
+        sudo dd if=/dev/zero of=/btrfs1.img bs=1G count=24 status=progress
         sudo dd if=/dev/zero of=/mnt/btrfs2.img bs=1G count=67 status=progress
         sudo losetup /dev/loop64 /btrfs1.img
         sudo losetup /dev/loop128 /mnt/btrfs2.img
